@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STACK images</title>
+    <style>
+        .para{
+            border: 1px solid black;
+            position: absolute;
+            width: 700px;
+            padding: 1cm;
+        }
+        #layer1{
+            background-color: aqua;
+            position: absolute;
+            top: 200px;
+            left: 400px;
+            z-index: 3;
+        }
+        #layer2{
+            background-color: aqua;
+            position: absolute;
+            top: 240px;
+            left: 440px;
+            z-index: 3;
+        }
+        #layer3{
+            background-color: aqua;
+            position: absolute;
+            top: 280px;
+            left: 480px;
+            z-index: 3;
+        }
+    </style>
+    <script type="text/javascript">
+        var topLayer = 'layer3';
+        function mover(toTop)
+        {
+            var oldTop = document.getElementById(topLayer).style;
+            var newTop = document.getElementById(toTop).style;
+            oldTop.zIndex = 0;
+            newTop.zIndex = 5;
+            topLayer = document.getElementById(toTop).id;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Stack of images</h2>
+    <div class="para" id="layer1" onmouseover="mover('layer1')">
+        <img src="sweet.jpeg" alt="sweet">
+    </div>
+    <div class="para" id="layer2" onmouseover="mover('layer2')">
+        <img src="logo.jpeg" alt="sweet">
+    </div>
+    <div class="para" id="layer3" onmouseover="mover('layer3')">
+        <img src="pizza.jpeg" alt="sweet">
+    </div>
+</body>
+
+</html>

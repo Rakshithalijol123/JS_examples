@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <style>
+        .btn{
+            font-size: 30px;
+            border-radius: 50%;
+            border: none;
+        }
+        #inp{
+            height: 30px;
+            width: 50px;
+            border-radius: 5px;
+            border: 0.1px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="quantity">
+        <input class="btn" id="btn1" type="button" value="-" onclick="dec_value()">
+        <input id="inp" type="number" value="1" maxlength="4" size="50">
+        <input class="btn" id="btn2" type="button" value="+" onclick="inc_value()">
+    </div>
+    <script>
+        
+        function inc_value()
+        {
+            var get_plus_id = document.getElementById('btn1');
+            var get_value_id = document.getElementById('inp');
+            var get_value = get_value_id.value;
+            get_value++;
+            get_value_id.value = get_value;
+        }
+        function dec_value()
+        {
+            var get_value_id = document.getElementById('inp');
+            var get_minus_id = document.getElementById('btn2');
+            var get_value = get_value_id.value;
+            if (get_value > 1)
+            {
+                get_value--;
+                get_value_id.value = get_value;
+            }
+
+
+        }
+
+    </script>
+</body>
+</html>

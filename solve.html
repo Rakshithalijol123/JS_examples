@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">p1</p>
+    <p id="p2">p2</p>
+    <p id="p3"></p>
+    <script>
+        let elem1 = document.getElementById('p1');
+        elem1 = elem1.innerHTML;
+        let elem2 = document.getElementById('p2');
+        elem2 = elem2.innerHTML;
+        let elem3 = document.getElementById('p3');
+        elem3 = elem3.innerHTML=elem1+elem2;
+        console.log(elem3);
+    </script>
+</body>
+</html>
